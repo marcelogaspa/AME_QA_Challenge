@@ -1,7 +1,15 @@
 ***Settings***
 Documentation   Simple QA test for web site http://automationpractice.com/index.php
 Library    Selenium2Library
-Library    /Resources/Variables.robot
+
+***Variables***
+${website}  http://automationpractice.com/index.php
+${Username}  Joao
+${LastName}  Ramalho
+${email}  jaoramalho999@gmail.com
+${password}  J0rmlh!2020
+${HOMEADDR}  Grey Friars Chase,1701 Street
+${City}  Virginia Beach
 
 ***Keywords***
 
@@ -36,6 +44,5 @@ Filling the fields "YOUR ADDRESS"
     Input Text  id=phone_mobile  +17578444587
     Input Text  id=alias    ${HOMEADDR}
     Click Button    Register
-    #Wait Until Location Contains 
     Sleep  4s
     Close Browser 
