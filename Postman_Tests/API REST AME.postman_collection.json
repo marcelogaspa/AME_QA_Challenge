@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "a2588067-7341-42c7-8446-92594e06ef6a",
+		"name": "API REST AME",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "employee_list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "db6bee30-7979-40a2-94d6-3084c559d613",
+						"exec": [
+							"// Getting All Employees Listed",
+							"tests[\"Should be selected all employees\"] = responseCode.code === 200"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				},
+				"description": "This is an API REST test for AME QA "
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new employee",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c3e3897b-e541-4399-bf05-3e68a493f86d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8dd7f156-35b2-41f9-a619-8c1567b7404e",
+						"exec": [
+							"// Should Be Create A New Employee",
+							"tests[\"Employee Name Should Be Created Successfully\"] = responseCode.code === 200;",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employee_name\": \"Jao Marcolino\",\n    \"employee_salary\": \"12300\",\n    \"employee_age\": \"23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/create",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locate an employee _Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8235b8f7-43d0-431c-9f46-b6cf826909d4",
+						"exec": [
+							"// Should Be Create A New Employee",
+							"tests[\"EmployeeID Should Be Got\"] = responseCode.code === 200"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/employee/4494",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"4494"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99f65423-e78a-401c-b676-9d36e788a09a",
+						"exec": [
+							"// Updating Employee Name",
+							"tests[\"Employee Name Should Be Updated Successfully\"] = responseCode.code === 200",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employee_name\": \"Joao Marcolino Ferraz\",\n    \"employee_salary\": \"12300\",\n    \"employee_age\": \"32\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/update/4494",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"4494"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1bbfe38d-579f-432b-bc86-5f918f5fb7fa",
+						"exec": [
+							"//Employee Has Been Deleted Successfully",
+							"tests[\"Employee Has Been Deleted\"] = responseCode.code === 200",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/delete/4494",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"delete",
+						"4494"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{employeeId}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dummy.restapiexample.com/api/v1/delete/4494",
+							"protocol": "http",
+							"host": [
+								"dummy",
+								"restapiexample",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"4494"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private, max-age=31536000"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 12 Sep 2020 15:24:14 GMT"
+						},
+						{
+							"key": "Display",
+							"value": "staticcontent_sol"
+						},
+						{
+							"key": "Expires",
+							"value": "Sun, 12 Sep 2021 15:24:14 GMT"
+						},
+						{
+							"key": "Host-Header",
+							"value": "c2hhcmVkLmJsdWVob3N0LmNvbQ=="
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": ""
+						},
+						{
+							"key": "Response",
+							"value": "200"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding,Origin"
+						},
+						{
+							"key": "X-Ezoic-Cdn",
+							"value": "Miss"
+						},
+						{
+							"key": "X-Middleton-Display",
+							"value": "staticcontent_sol"
+						},
+						{
+							"key": "X-Middleton-Response",
+							"value": "200"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "X-Sol",
+							"value": "pub_site"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": \"4494\",\n    \"message\": \"Successfully! Record has been deleted\"\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
