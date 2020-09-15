@@ -1,2 +1,2 @@
 # QA_Challenge
-This repo containd the API REST and Automation Test Cases
+This repo contains the API REST and Automation Test Cases based on website => http://automationpractice.com/index.php
