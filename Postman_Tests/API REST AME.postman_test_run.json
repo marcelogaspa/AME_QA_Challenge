@@ -1,0 +1,173 @@
+{
+	"id": "dffd6c4a-dc52-4e56-b025-2ebf8e3c6104",
+	"name": "API REST AME",
+	"timestamp": "2020-09-15T17:18:20.879Z",
+	"collection_id": "a2588067-7341-42c7-8446-92594e06ef6a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "54f833fd-1f45-4380-9b21-9d4bf62a937d",
+			"name": "employee_list",
+			"url": "http://dummy.restapiexample.com/api/v1/employees",
+			"time": 2030,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Should be selected all employees": false
+			},
+			"testPassFailCounts": {
+				"Should be selected all employees": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2030
+			],
+			"allTests": [
+				{
+					"Should be selected all employees": false
+				}
+			]
+		},
+		{
+			"id": "ef0873e9-c637-44d5-b1c1-4804e5536798",
+			"name": "Add a new employee",
+			"url": "http://dummy.restapiexample.com/api/v1/create",
+			"time": 2421,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Employee Name Should Be Created Successfully": true
+			},
+			"testPassFailCounts": {
+				"Employee Name Should Be Created Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2421
+			],
+			"allTests": [
+				{
+					"Employee Name Should Be Created Successfully": true
+				}
+			]
+		},
+		{
+			"id": "53fc9cfe-e305-4821-a30a-fd36b1293168",
+			"name": "Locate an employee _Id",
+			"url": "http://dummy.restapiexample.com/api/v1/employee/4494",
+			"time": 1938,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"EmployeeID Should Be Got": true
+			},
+			"testPassFailCounts": {
+				"EmployeeID Should Be Got": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1938
+			],
+			"allTests": [
+				{
+					"EmployeeID Should Be Got": true
+				}
+			]
+		},
+		{
+			"id": "b816b531-6c5a-44ad-ba4e-47387d6d1876",
+			"name": "Update employee data",
+			"url": "http://dummy.restapiexample.com/api/v1/update/4494",
+			"time": 1430,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Employee Name Should Be Updated Successfully": true
+			},
+			"testPassFailCounts": {
+				"Employee Name Should Be Updated Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1430
+			],
+			"allTests": [
+				{
+					"Employee Name Should Be Updated Successfully": true
+				}
+			]
+		},
+		{
+			"id": "96334d88-8bdd-4344-b64a-422df42d4aa3",
+			"name": "Delete Employee",
+			"url": "http://dummy.restapiexample.com/api/v1/delete/4494",
+			"time": 979,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Employee Has Been Deleted": false
+			},
+			"testPassFailCounts": {
+				"Employee Has Been Deleted": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				979
+			],
+			"allTests": [
+				{
+					"Employee Has Been Deleted": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 8798,
+	"collection": {
+		"requests": [
+			{
+				"id": "54f833fd-1f45-4380-9b21-9d4bf62a937d",
+				"method": "GET"
+			},
+			{
+				"id": "ef0873e9-c637-44d5-b1c1-4804e5536798",
+				"method": "POST"
+			},
+			{
+				"id": "53fc9cfe-e305-4821-a30a-fd36b1293168",
+				"method": "GET"
+			},
+			{
+				"id": "b816b531-6c5a-44ad-ba4e-47387d6d1876",
+				"method": "PUT"
+			},
+			{
+				"id": "96334d88-8bdd-4344-b64a-422df42d4aa3",
+				"method": "DELETE"
+			}
+		]
+	}
+}
