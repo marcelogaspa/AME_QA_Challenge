@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.2 on linux)" generated="20200914 18:21:51.918" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.2 on linux)" generated="20200914 18:34:27.649" rpa="false">
 <suite id="s1" name="Login" source="/home/marcelo/Documents/github/AME_QA_Challenge/web/Tests/login.robot">
 <test id="s1-t1" name="Creating Username Credentials">
 <kw name="Open Browser" library="Selenium2Library">
@@ -7,17 +7,17 @@
 <arguments>
 <arg>${website}</arg>
 </arguments>
-<msg timestamp="20200914 18:21:52.242" level="INFO">Opening browser 'firefox' to base url 'http://automationpractice.com/index.php'.</msg>
-<msg timestamp="20200914 18:21:52.243" level="INFO">Firefox driver log is always forced to to: /home/marcelo/Documents/github/AME_QA_Challenge/web/Results/geckodriver-1.log</msg>
-<status status="PASS" starttime="20200914 18:21:52.241" endtime="20200914 18:22:07.996"></status>
+<msg timestamp="20200914 18:34:27.928" level="INFO">Opening browser 'firefox' to base url 'http://automationpractice.com/index.php'.</msg>
+<msg timestamp="20200914 18:34:27.930" level="INFO">Firefox driver log is always forced to to: /home/marcelo/Documents/github/AME_QA_Challenge/web/Results/geckodriver-2.log</msg>
+<status status="PASS" starttime="20200914 18:34:27.927" endtime="20200914 18:34:38.304"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>http://automationpractice.com/index.php?controller=my-account</arg>
 </arguments>
-<msg timestamp="20200914 18:22:08.010" level="INFO">Clicking link 'http://automationpractice.com/index.php?controller=my-account'.</msg>
-<status status="PASS" starttime="20200914 18:22:07.997" endtime="20200914 18:22:09.956"></status>
+<msg timestamp="20200914 18:34:38.312" level="INFO">Clicking link 'http://automationpractice.com/index.php?controller=my-account'.</msg>
+<status status="PASS" starttime="20200914 18:34:38.305" endtime="20200914 18:34:40.315"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -25,22 +25,22 @@
 <arg>xpath= //*[@id="email_create"]</arg>
 <arg>${email}</arg>
 </arguments>
-<msg timestamp="20200914 18:22:09.958" level="INFO">Typing text 'jaoramalho999@gmail.com' into text field 'xpath= //*[@id="email_create"]'.</msg>
-<status status="PASS" starttime="20200914 18:22:09.957" endtime="20200914 18:22:10.191"></status>
+<msg timestamp="20200914 18:34:40.316" level="INFO">Typing text 'jaoramalho999@gmail.com' into text field 'xpath= //*[@id="email_create"]'.</msg>
+<status status="PASS" starttime="20200914 18:34:40.315" endtime="20200914 18:34:40.500"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>id=SubmitCreate</arg>
 </arguments>
-<msg timestamp="20200914 18:22:10.194" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
-<status status="PASS" starttime="20200914 18:22:10.194" endtime="20200914 18:22:10.554"></status>
+<msg timestamp="20200914 18:34:40.502" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
+<status status="PASS" starttime="20200914 18:34:40.502" endtime="20200914 18:34:40.864"></status>
 </kw>
 <doc>User should be able to login website</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20200914 18:21:52.240" endtime="20200914 18:22:10.555" critical="yes"></status>
+<status status="PASS" starttime="20200914 18:34:27.926" endtime="20200914 18:34:40.865" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Filling the Personal Information fields">
 <kw name="Wait Until Page Contains" library="Selenium2Library">
@@ -48,7 +48,7 @@
 <arguments>
 <arg>Your personal information</arg>
 </arguments>
-<status status="PASS" starttime="20200914 18:22:10.560" endtime="20200914 18:22:12.247"></status>
+<status status="PASS" starttime="20200914 18:34:40.870" endtime="20200914 18:34:42.019"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -56,8 +56,8 @@
 <arg>id=customer_firstname</arg>
 <arg>${Username}</arg>
 </arguments>
-<msg timestamp="20200914 18:22:12.247" level="INFO">Typing text 'Joao' into text field 'id=customer_firstname'.</msg>
-<status status="PASS" starttime="20200914 18:22:12.247" endtime="20200914 18:22:12.356"></status>
+<msg timestamp="20200914 18:34:42.020" level="INFO">Typing text 'Joao' into text field 'id=customer_firstname'.</msg>
+<status status="PASS" starttime="20200914 18:34:42.020" endtime="20200914 18:34:42.095"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -65,8 +65,8 @@
 <arg>id=customer_lastname</arg>
 <arg>${LastName}</arg>
 </arguments>
-<msg timestamp="20200914 18:22:12.357" level="INFO">Typing text 'Ramalho' into text field 'id=customer_lastname'.</msg>
-<status status="PASS" starttime="20200914 18:22:12.356" endtime="20200914 18:22:12.456"></status>
+<msg timestamp="20200914 18:34:42.095" level="INFO">Typing text 'Ramalho' into text field 'id=customer_lastname'.</msg>
+<status status="PASS" starttime="20200914 18:34:42.095" endtime="20200914 18:34:42.161"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -74,14 +74,14 @@
 <arg>id=passwd</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200914 18:22:12.457" level="INFO">Typing text 'J0rmlh!2020' into text field 'id=passwd'.</msg>
-<status status="PASS" starttime="20200914 18:22:12.456" endtime="20200914 18:22:12.858"></status>
+<msg timestamp="20200914 18:34:42.162" level="INFO">Typing text 'J0rmlh!2020' into text field 'id=passwd'.</msg>
+<status status="PASS" starttime="20200914 18:34:42.161" endtime="20200914 18:34:42.277"></status>
 </kw>
 <doc>Filling the "YOUR PERSONAL INFORMATION" fields</doc>
 <tags>
 <tag>usercredentials</tag>
 </tags>
-<status status="PASS" starttime="20200914 18:22:10.556" endtime="20200914 18:22:12.859" critical="yes"></status>
+<status status="PASS" starttime="20200914 18:34:40.867" endtime="20200914 18:34:42.278" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Filling the fields &quot;YOUR ADDRESS&quot;">
 <kw name="Input Text" library="Selenium2Library">
@@ -90,8 +90,8 @@
 <arg>id=address1</arg>
 <arg>${HOMEADDR}</arg>
 </arguments>
-<msg timestamp="20200914 18:22:12.862" level="INFO">Typing text 'Grey Friars Chase,1701 Street' into text field 'id=address1'.</msg>
-<status status="PASS" starttime="20200914 18:22:12.862" endtime="20200914 18:22:13.081"></status>
+<msg timestamp="20200914 18:34:42.280" level="INFO">Typing text 'Grey Friars Chase,1701 Street' into text field 'id=address1'.</msg>
+<status status="PASS" starttime="20200914 18:34:42.280" endtime="20200914 18:34:42.501"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -99,33 +99,32 @@
 <arg>id=city</arg>
 <arg>${City}</arg>
 </arguments>
-<msg timestamp="20200914 18:22:13.083" level="INFO">Typing text 'Virginia Beach' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20200914 18:22:13.081" endtime="20200914 18:22:13.193"></status>
+<msg timestamp="20200914 18:34:42.502" level="INFO">Typing text 'Virginia Beach' into text field 'id=city'.</msg>
+<status status="PASS" starttime="20200914 18:34:42.502" endtime="20200914 18:34:42.767"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20200914 18:22:15.194" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200914 18:22:13.193" endtime="20200914 18:22:15.194"></status>
+<msg timestamp="20200914 18:34:44.768" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200914 18:34:42.767" endtime="20200914 18:34:44.768"></status>
 </kw>
-<kw name="Select List From by index">
+<kw name="Select List From by label">
 <arguments>
-<arg>id_state</arg>
-<arg>46</arg>
+<arg>xpath=//*[@id="id_state"] Virginia</arg>
 </arguments>
-<msg timestamp="20200914 18:22:15.203" level="FAIL">No keyword with name 'Select List From by index' found.</msg>
-<status status="FAIL" starttime="20200914 18:22:15.202" endtime="20200914 18:22:15.203"></status>
+<msg timestamp="20200914 18:34:44.774" level="FAIL">No keyword with name 'Select List From by label' found.</msg>
+<status status="FAIL" starttime="20200914 18:34:44.774" endtime="20200914 18:34:44.774"></status>
 </kw>
 <doc>Filling the "YOUR ADDRESS" fields</doc>
 <tags>
 <tag>usercredentials</tag>
 </tags>
-<status status="FAIL" starttime="20200914 18:22:12.860" endtime="20200914 18:22:15.203" critical="yes">No keyword with name 'Select List From by index' found.</status>
+<status status="FAIL" starttime="20200914 18:34:42.279" endtime="20200914 18:34:44.775" critical="yes">No keyword with name 'Select List From by label' found.</status>
 </test>
 <doc>Simple QA test for web site http://automationpractice.com/index.php</doc>
-<status status="FAIL" starttime="20200914 18:21:51.920" endtime="20200914 18:22:15.208"></status>
+<status status="FAIL" starttime="20200914 18:34:27.651" endtime="20200914 18:34:44.776"></status>
 </suite>
 <statistics>
 <total>
